@@ -10,38 +10,6 @@ import Foundation
 import UIKit
 
 let imageCache = NSCache<AnyObject, UIImage>()
-//extension UIImageView{
-//
-//    func setImage(from url: String){
-//        image = nil
-//        if let imageFromCache = imageCache.object(forKey: url as AnyObject){
-//            DispatchQueue.main.async {
-//                self.image = imageFromCache
-//            }
-//            return
-//        }
-//
-//        guard let urlApi = URL(string: url) else{ return }
-//        let urlResquest = URLRequest(url: urlApi)
-//
-//        let apiClient = APIClient()
-//        apiClient.get(url: urlResquest) { (result: Result<Data, APIError>) in
-//            switch result{
-//
-//            case .success(let data):
-//                DispatchQueue.main.async {
-//                    let imageToCache = UIImage(data: data)
-//                    imageCache.setObject(imageToCache!, forKey: url as AnyObject)
-//                    self.image = imageToCache
-//                }
-//            case .failure:
-//                DispatchQueue.main.async {
-//                    self.image = UIImage(named: "MissingImage")
-//                }
-//            }
-//        }
-//    }
-//}
 
 extension UIImageView{
     func setImage(from url: String){
